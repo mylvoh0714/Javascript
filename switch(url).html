@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    var site = prompt(" 1.Baekjoon\n\ 2.Topcoder\n\ 3.Codeforce\n\ 4.HankerRank\n\
+which do you prefer? Select 1,2,3,4");
+    var url;
+    
+    switch(site)
+    {
+    case "1": url = "http://www.acmicpc.net/";
+    break;
+    case "2": url = "https://www.topcoder.com/";
+    break;
+    case "3": url = "http:/codeforces.com/";
+    break;
+    case "4": url = "https://www.hackerrank.com/";
+    break;
+    default: alert("보기중에 없는 사이트 입니다");
+    }
+    
+    if(url) location.href = url;
+</script>
+<body>
+</body>
+</html>
