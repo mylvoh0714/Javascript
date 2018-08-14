@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> "OS and Screen Information" </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script>
+    var info = navigator.userAgent.toLowerCase();
+    var osimage = null;
+    
+    if(info.indexOf('windows') >= 0) {
+        osimage = "windows.png";
+    } else if(info.indexOf('macintosh') >= 0 ) {
+        osimage = "macintosh.png";
+    } else if(info.indexOf('iphone.png') >= 0) {
+        osimage = 'iphone.png';
+    } else if(info.indexOf('android') >= 0) {
+        osimage = 'android.png';
+    }
+    
+    document.write("<img src=\"images/" + osimage + "\">","<br>");
+    var scr = screen;
+    var sc_w = scr.width;
+    var sc_h = scr.height;
+    document.write("OS Info : " + osimage.substring(0,osimage.length-4) + "<br>");
+    document.write("Screen Width : " + sc_w + "px", "<br>");
+    document.write("Screen Height : " + sc_h + "px", "<br>");
+</script>
+</head>
+<body>
+    
+</body>
+</html>

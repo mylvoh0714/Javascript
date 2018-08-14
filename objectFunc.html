@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+    function ObesityTest(n,h,w) { // name,height,weight
+        this.name = n;
+        this.height = h;
+        this.weight = w;
+        this.minW;
+        this.maxW;
+    }
+    ObesityTest.prototype.getInfo = function() {
+        var str = "";
+        str += "Name : " + this.name + "<br>";
+        str += "Height : " + this.height + "<br>";
+        str += "Weight : " + this.weight + "<br>";
+        return str;
+    }
+    ObesityTest.prototype.getResult = function() {
+        this.minW = (this.height - 100) * 0.9 - 5;
+		this.maxW = (this.height - 100) * 0.9 + 5;
+
+		if(this.height >= this.minW && this.height <= this.maxW) {
+			return "정상 몸무게입니다";
+		} else if(this.weight < this.minW) {
+			return "정상 몸무게보다 미달입니다";
+		} else {
+			return "정상 몸무게보다 초과입니다";
+		}
+    }
+    
+    var hyuntaek = new ObesityTest("오현택",178,70);
+    var Jeesoo = new ObesityTest("서지수",160,58);
+    console.log(hyuntaek);
+    console.log(Jeesoo);
+    document.write(hyuntaek.getInfo());
+    document.write(hyuntaek.getResult(),"<br>");
+
+    document.write(hyuntaek.getResult === Jeesoo.getResult);
+    
+</script>
+</head>
+<body>
+</body>
+</html>

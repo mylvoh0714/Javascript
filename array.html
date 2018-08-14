@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice</title>
+</head>
+<script>
+   var userEmail = prompt("이메일 주소를 입력하시오");
+   var arrUrl = [".co.kr",".com",".net",".or.kr",".go.kr"];
+   //confirm("당신이 적어준 이메일주소? : " +  userEmail + "가 맞습니까 ?");
+   
+   var check1 = false;
+   var check2 = false;
+   
+   if(userEmail.indexOf("@") > 0) {
+       check1 = true;   
+   }
+   for(i in arrUrl)
+   {
+       if(userEmail.indexOf(arrUrl[i]) > 0) check2 = true;
+   }
+
+   if(check1 && check2) {
+       document.write(userEmail);
+   } else {
+       alert("이메일 형식이 잘못되었습니다");
+   }
+</script>
+<body>
+</body>
+</html>
